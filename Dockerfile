@@ -6,7 +6,6 @@ COPY package*.json /app/
 RUN npm install
 COPY . .
 RUN npm run build
-CMD ["npm", "run", "start"]
 
 # Second stage: use the build output from the first stage with nginx
 FROM nginx:1.25

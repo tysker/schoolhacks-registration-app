@@ -1,12 +1,14 @@
 import axios from 'axios';
 
 
-let URL = "";
-if (import.meta.env.MODE === 'production') {
-    URL += 'http://server:3000/api/v1';
-} else {
-    URL += 'http://localhost:3000/api/v1';
-}
+// let URL = "";
+// if (import.meta.env.MODE === 'production') {
+//     URL += 'http://server:3000/api/v1';
+// } else {
+//     URL += 'http://localhost:3000/api/v1';
+// }
+
+const URL = 'http://localhost:3000/api/v1';
 
 console.log(import.meta.env.MODE);
 

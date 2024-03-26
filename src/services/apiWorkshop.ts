@@ -4,7 +4,7 @@ import axios from 'axios';
 let URL = "";
 if (import.meta.env.MODE === 'production') {
     console.log(URL)
-    URL += 'server:3000/api/v1';
+    URL += 'http://server:3000/api/v1';
 } else {
     console.log(URL)
     URL += 'http://localhost:3000/api/v1';

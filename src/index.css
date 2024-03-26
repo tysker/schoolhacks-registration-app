@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+font-size skema:
+letter-spacing skema:
+font-weight skema:
+color skema:
+
+main color (red): text-rose-800
+secondary color (yellow): bg-yellow-400
+gray color (dark): bg-gray-200
+gray color (light): bg-gray-200
+gray color (extra-light): bg-gray-50
+*/
+
+@layer components {
+    .button {
+        @apply inline-block rounded-full bg-yellow-400 p-5 text-2xl uppercase tracking-wide transition-colors duration-300 hover:bg-yellow-300 focus:bg-yellow-300
+        focus:outline-none focus:ring focus:ring-yellow-300 focus:ring-offset-2;
+    }
+
+    /* https://dev.to/afif/i-made-100-css-loaders-for-your-next-project-4eje */
+    .loader {
+        width: 45px;
+        aspect-ratio: 0.75;
+        --c: no-repeat linear-gradient(theme(colors.stone.800) 0 0);
+        background:
+                var(--c) 0% 50%,
+                var(--c) 50% 50%,
+                var(--c) 100% 50%;
+        background-size: 20% 50%;
+        animation: loading 1s infinite linear;
+    }
+
+    @keyframes loading {
+        20% {
+            background-position:
+                    0% 0%,
+                    50% 50%,
+                    100% 50%;
+        }
+        40% {
+            background-position:
+                    0% 100%,
+                    50% 0%,
+                    100% 50%;
+        }
+        60% {
+            background-position:
+                    0% 50%,
+                    50% 100%,
+                    100% 0%;
+        }
+        80% {
+            background-position:
+                    0% 50%,
+                    50% 50%,
+                    100% 100%;
+        }
+    }
+}
+

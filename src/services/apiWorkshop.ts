@@ -11,10 +11,14 @@ if (import.meta.env.MODE === 'production') {
 console.log(import.meta.env.MODE);
 
 export const getWorkshops = async () => {
-    const response = await axios.get<AxiosResponseDataWorkShops>(
-        `${URL}/workshops`,
-    );
-    return response.data.workshops;
+    try {
+        const response = await axios.get<AxiosResponseDataWorkShops>(
+            `${URL}/workshops`,
+        );
+        return response.data.workshops;
+    } catch (error: unknown) {
+        throw new Error(`Workshops not found. url: ${URL}/workshops`);
+    }
 };
 
 export const getWorkshopFromParamID = async (id: string) => {

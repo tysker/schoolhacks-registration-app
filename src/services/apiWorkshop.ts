@@ -3,15 +3,11 @@ import axios from 'axios';
 
 let URL = "";
 if (import.meta.env.MODE === 'production') {
-    console.log(URL)
-    URL += 'http://server:3000/api/v1';
+    URL += 'http://server/api/v1';
 } else {
-    console.log(URL)
     URL += 'http://localhost:3000/api/v1';
 }
-//
-// const URL = 'http://localhost:3000/api/v1';
-console.log(URL)
+
 console.log(import.meta.env.MODE);
 
 export const getWorkshops = async () => {

@@ -1,12 +1,12 @@
 # First stage: build the react app
 # FROM tiangolo/node-frontend:10 as build-stage
-FROM node:20.0-alpine as build-stage
+FROM node:20.0.0 as build-stage
 WORKDIR /app
 COPY package*.json /app/
 RUN npm install
 COPY . .
 RUN npm run build
-CMD ["npm", "start"]
+CMD ["npm", "run", "start"]
 
 # Second stage: use the build output from the first stage with nginx
 FROM nginx:1.25

@@ -1,13 +1,7 @@
 import axios from 'axios';
 
+const URL = import.meta.env.MODE === 'production' ? 'http://server:3000/api/v1' : 'http://localhost:3000/api/v1';
 
-const URL = "http://localhost:3000/api/v1";
-// if (import.meta.env.MODE === 'production') {
-//     URL += 'http://172.28.0.2:3000/api/v1';
-// } else {
-//     URL += '';
-// }
-// console.log("URL", URL)
 export const getWorkshops = async () => {
     try {
         const response = await axios.get<AxiosResponseDataWorkShops>(

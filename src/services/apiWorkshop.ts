@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const URL = import.meta.env.MODE === 'production' ? 'http://167.99.246.33:3000/api/v1' : 'http://localhost:3000/api/v1';
+const URL = import.meta.env.MODE === 'production' ? 'https://server.schoolhacks.eu/api/v1' : 'http://localhost:3000/api/v1';
 
 export const getWorkshops = async () => {
     try {

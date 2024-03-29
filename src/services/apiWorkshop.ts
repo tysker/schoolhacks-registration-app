@@ -33,7 +33,7 @@ export const signUpUserAndAddToWorkshop = async (id: string, user: User) => {
             user.name.substring(1).toLowerCase();
 
         const response = await axios.post<AxiosResponseDataWorkShop>(
-            `${URL}/api/v1/users/${id}`,
+            `${URL}/users/${id}`,
             user,
         );
 

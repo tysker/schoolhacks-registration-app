@@ -7,3 +7,5 @@ export const eachWordUppercase = (str: string[]) => {
 };
 export const replaceWhitespace = (str: string) =>
   str.replaceAll(' ', '_').toLowerCase();
+
+

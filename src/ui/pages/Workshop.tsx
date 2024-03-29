@@ -1,10 +1,10 @@
 import { useLoaderData } from 'react-router-dom';
 import { useState } from 'react';
-import SignUpModal from './SignUpModal.tsx';
-import SignUpForm from './SignUpForm.tsx';
-import SignUpButton from './SignUpButton.tsx';
+import SignUpModal from '../../features/workshop/SignUpModal.tsx';
+import SignUpForm from '../../features/workshop/SignUpForm.tsx';
+import Button from '../../features/workshop/Button.tsx';
 
-function ContainerLarge() {
+function Workshop() {
   const container: WorkshopItem = useLoaderData() as WorkshopItem;
   const [showModal, setShowModal] = useState(false);
 
@@ -47,10 +47,10 @@ function ContainerLarge() {
             workshop_id={_id}
           />
         </SignUpModal>
-        <SignUpButton handleClose={handleClose} />
+        <Button handler={handleClose} color="bg-yellow-400" text="Sign Up" />
       </div>
     </div>
   );
 }
 
-export default ContainerLarge;
+export default Workshop;

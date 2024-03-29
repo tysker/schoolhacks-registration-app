@@ -1,6 +1,7 @@
-import ContainerSmall from '../../features/workshop/ContainerSmall.tsx';
+import WorkshopContainer from '../../features/workshop/WorkshopContainer.tsx';
 import { useLoaderData } from 'react-router-dom';
 import { useState } from 'react';
+import Pagination from "../Pagination.tsx";
 
 function WorkshopList() {
   const containers: WorkshopItem[] = useLoaderData() as WorkshopItem[];
@@ -22,30 +23,9 @@ function WorkshopList() {
   return (
     <div className="mt-5 flex w-full flex-col items-center gap-5">
       {paginatedContainers.map((container) => (
-        <ContainerSmall key={container._id} container={container} />
+        <WorkshopContainer key={container._id} container={container} />
       ))}
-      <div className="fixed bottom-24 flex gap-2 md:right-10">
-        {page > 1 && (
-          <button
-            onClick={() => {
-              setPage(1);
-            }}
-            className="rounded-md bg-stone-500 p-2 text-white"
-          >
-            Previous
-          </button>
-        )}
-        {containers.length > end && (
-          <button
-            onClick={() => {
-              setPage(page + 1);
-            }}
-            className="rounded-md bg-stone-500 p-2 text-white"
-          >
-            Next
-          </button>
-        )}
-      </div>
+      <Pagination containerLength={containers.length} page={page} end={end} changePage={setPage} />
     </div>
   );
 }

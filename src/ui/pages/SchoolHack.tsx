@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-function Home() {
+function SchoolHack() {
   return (
     <div className="my-20 text-center font-semibold">
       <h1 className="mb-10 text-4xl underline md:text-3xl lg:text-8xl dark:text-stone-300">
@@ -13,4 +13,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default SchoolHack;

@@ -1,4 +1,3 @@
-import '../../styles/styles.css';
 import React from 'react';
 
 type SignUpModalProps = {

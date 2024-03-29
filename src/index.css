@@ -18,7 +18,7 @@ gray color (extra-light): bg-gray-50
 @layer components {
     .button {
         @apply inline-block rounded-full bg-yellow-400 p-5 text-2xl uppercase tracking-wide transition-colors duration-300 hover:bg-yellow-300 focus:bg-yellow-300
-        focus:outline-none focus:ring focus:ring-yellow-300 focus:ring-offset-2;
+        focus:outline-none focus:ring focus:ring-red-600 focus:ring-offset-2;
     }
 
     /* https://dev.to/afif/i-made-100-css-loaders-for-your-next-project-4eje */

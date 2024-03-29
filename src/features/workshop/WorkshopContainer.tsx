@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 
-function ContainerSmall({ container }: { container: WorkshopItem }) {
+function WorkshopContainer({ container }: { container: WorkshopItem }) {
   const { _id, image, title, weekday, time, location, price, isEnded, users } =
     container;
 
@@ -41,4 +41,4 @@ function ContainerSmall({ container }: { container: WorkshopItem }) {
   );
 }
 
-export default ContainerSmall;
+export default WorkshopContainer;

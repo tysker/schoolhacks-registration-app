@@ -1,13 +1,14 @@
 import { useRouteError } from 'react-router-dom';
-import LinkButton from '../LinkButton.tsx';
+import LinkButton from './LinkButton.tsx';
 
 function Error() {
+
   const error = useRouteError() as {
     data?: string;
     message?: string;
   };
+
   const { data, message } = error;
-  console.log('ERROR: ', error);
 
   return (
     <div className="mt-20 text-center text-sm font-bold uppercase tracking-wide text-rose-800 lg:text-xl">

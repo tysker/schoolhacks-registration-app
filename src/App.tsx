@@ -1,7 +1,7 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import AppLayout from './ui/AppLayout.tsx';
-import ContainerLarge from './features/workshop/ContainerLarge.tsx';
-import Error from './ui/pages/Error.tsx';
+import Workshop from './ui/pages/Workshop.tsx';
+import Error from './features/error/Error.tsx';
 import WorkshopList from './ui/pages/WorkshopList.tsx';
 import Confirmation from './ui/pages/Confirmation.tsx';
 import {
@@ -9,7 +9,7 @@ import {
   workshopLoader,
 } from './services/routerLoaderFunctions.ts';
 import { signUpUser } from './services/routerActionFunctions.ts';
-import Home from './ui/pages/Home.tsx';
+import SchoolHack from './ui/pages/SchoolHack.tsx';
 
 function App() {
   const router = createBrowserRouter([
@@ -19,7 +19,7 @@ function App() {
       children: [
         {
           path: '/',
-          element: <Home />,
+          element: <SchoolHack />,
         },
         {
           path: '/workshops',
@@ -29,7 +29,7 @@ function App() {
         },
         {
           path: '/:id',
-          element: <ContainerLarge />,
+          element: <Workshop />,
           loader: ({ params }) => workshopLoader(params.id!),
           action: signUpUser,
           errorElement: <Error />,

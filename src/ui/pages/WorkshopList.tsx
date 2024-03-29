@@ -15,7 +15,7 @@ function WorkshopList() {
 
   containers.sort(sortByIsEnded);
 
-  const pagination = 4;
+  const pagination = 6;
   const start = (page - 1) * pagination;
   const end = start + pagination;
   const paginatedContainers: WorkshopItem[] = containers.slice(start, end);

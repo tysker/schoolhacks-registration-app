@@ -14,7 +14,7 @@ function WorkshopContainer({ container }: { container: WorkshopItem }) {
   return (
     <div
       onClick={clickHandler}
-      className={`flex w-full ${isEnded ? 'cursor-pointer:none' : 'cursor-pointer'} ${isEnded ? 'bg-rose-100' : 'bg-stone-200'} rounded-2xl shadow-md transition-colors duration-500 hover:bg-yellow-300 dark:text-stone-900 dark:hover:bg-stone-700`}
+      className={`flex w-11/12 ${isEnded ? 'cursor-pointer:none' : 'cursor-pointer'} ${isEnded ? 'bg-rose-100' : 'bg-stone-200'} rounded-2xl shadow-md transition-colors duration-500 hover:bg-yellow-300 dark:text-stone-900 dark:hover:bg-stone-700`}
     >
       <img
         className="m-4 h-[100px] w-[100px] rounded-2xl border-4 border-stone-500"

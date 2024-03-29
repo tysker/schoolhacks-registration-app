@@ -3,7 +3,7 @@ import {signUpUserAndAddToWorkshop} from './apiWorkshop.ts';
 import {eachWordUppercase} from '../utils/helpers.ts';
 
 export const signUpUser = async ({request}: any) => {
-    console.log('request', request)
+
     const formData = await request.formData();
     const data = Object.fromEntries(formData);
 

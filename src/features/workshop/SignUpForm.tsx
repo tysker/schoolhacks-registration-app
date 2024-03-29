@@ -20,6 +20,11 @@ function SignUpForm({setShowModal, workshop, workshop_id}: SignUpFormProps) {
         workshop_name: workshop,
     };
 
+    const resetHandler = () => {
+        formError!.message = '';
+        setShowModal(false);
+    };
+
     return (
         <Form
             className="h-auto w-auto bg-stone-100 p-12 lg:w-96 dark:bg-stone-800"
@@ -71,7 +76,7 @@ function SignUpForm({setShowModal, workshop, workshop_id}: SignUpFormProps) {
                 <div className="flex items-center gap-6">
                     <Button disabled={isSubmitting} type="submit" color="bg-yellow-400"
                             text={isSubmitting ? 'Registering...' : 'Register'}/>
-                    <Button handler={() => setShowModal(false)} type="reset" color="bg-stone-300" text="Cancel"/>
+                    <Button handler={resetHandler} type="reset" color="bg-stone-300" text="Cancel"/>
                 </div>
             </div>
         </Form>

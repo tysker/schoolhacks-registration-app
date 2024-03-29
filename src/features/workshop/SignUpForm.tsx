@@ -21,7 +21,9 @@ function SignUpForm({setShowModal, workshop, workshop_id}: SignUpFormProps) {
     };
 
     const resetHandler = () => {
-        formError!.message = '';
+        if (formError) {
+            formError!.message = '';
+        }
         setShowModal(false);
     };
 

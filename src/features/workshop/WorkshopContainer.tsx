@@ -14,19 +14,19 @@ function WorkshopContainer({ container }: { container: WorkshopItem }) {
   return (
     <div
       onClick={clickHandler}
-      className={`flex w-full ${isEnded ? 'cursor-pointer:none' : 'cursor-pointer'} ${isEnded && 'bg-rose-400'} rounded-2xl shadow-md transition-colors duration-500 hover:bg-yellow-300 dark:text-stone-200 dark:hover:bg-stone-700`}
+      className={`flex w-full ${isEnded ? 'cursor-pointer:none' : 'cursor-pointer'} ${isEnded ? 'bg-rose-100' : 'bg-stone-200'} rounded-2xl shadow-md transition-colors duration-500 hover:bg-yellow-300 dark:text-stone-900 dark:hover:bg-stone-700`}
     >
       <img
         className="m-4 h-[100px] w-[100px] rounded-2xl border-4 border-stone-500"
         src={image}
         alt={title}
       />
-      <div className="relative right-[40px] top-[25px] text-sm font-light text-stone-100">
-        {users.length}
-      </div>
       <div className="mt-2 flex flex-col">
         <div className={`mb-2 text-lg font-bold̈́ ${isEnded && "line-through"}`}>
           {title.length > 25 ? title.slice(0, 24) + '...' : title}
+          <p className="inline-block text-sm ml-2 font-light text-stone-900">
+            {users.length}
+          </p>
         </div>
         <div className="mb-1 text-sm font-light">
           {weekday} | {time}

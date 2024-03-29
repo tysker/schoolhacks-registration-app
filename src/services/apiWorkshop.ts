@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const URL = import.meta.env.MODE === 'production' ? 'http://server:3000/api/v1' : 'http://localhost:3000/api/v1';
+const URL = import.meta.env.MODE === 'production' ? 'http://localhost:3000/api/v1' : 'http://localhost:3000/api/v1';
 
 export const getWorkshops = async () => {
     try {

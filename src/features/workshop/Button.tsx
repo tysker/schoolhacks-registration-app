@@ -4,9 +4,10 @@ type ButtonProps = {
     disabled?: boolean;
     color?: string;
     text?: string;
+    width?: string;
 };
 
-function Button({type = "button", handler = () => {}, disabled = false, color = "bg-stone-500", text = "Button"}: ButtonProps) {
+function Button({type = "button", handler = () => {}, disabled = false, color = "bg-stone-500", text = "Button", width = "100px"}: ButtonProps) {
 
     const number = Number(color?.slice(color.length - 3, color.length)) - 100;
     const hooverColor = color?.slice(0, color.length - 3) + number.toString();
@@ -16,7 +17,7 @@ function Button({type = "button", handler = () => {}, disabled = false, color = 
             type={type}
             onClick={handler}
             disabled={disabled}
-            className={`rounded-full ${color} p-3 font-extrabold hover:${hooverColor} active:${hooverColor} dark:text-stone-900`}
+            className={`rounded-full ${color} w-[${width}] p-3 font-extrabold hover:${hooverColor} active:${hooverColor} dark:text-stone-900`}
         >
             {text}
         </button>

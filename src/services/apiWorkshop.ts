@@ -7,6 +7,7 @@ export const getWorkshops = async () => {
         const response = await axios.get<AxiosResponseDataWorkShops>(
             `${URL}/workshops`,
         );
+
         return response.data.workshops;
     } catch (error: any) {
         throw new Error(error.response.data.message);

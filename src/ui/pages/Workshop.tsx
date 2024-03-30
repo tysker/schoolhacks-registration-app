@@ -36,7 +36,7 @@ function Workshop() {
           {location}
         </span>
             </div>
-            <div className="mb-4 ml-4 font-medium leading-loose lg:pt-2 lg:text-xl">
+            <div className="mb-4 ml-4 font-medium leading-loose lg:pt-2 lg:text-xl md:mb-10">
                 {description}
             </div>
             <div className="self-center">

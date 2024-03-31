@@ -77,7 +77,7 @@ function SignUpForm({setShowModal, workshop, workshop_id}: SignUpFormProps) {
                 />
                 <div className="flex items-center gap-6">
                     <Button disabled={isSubmitting} type="submit" color="bg-yellow-400"
-                            text={isSubmitting ? 'Registering...' : 'Register'}/>
+                            text={isSubmitting ? 'Registering...' : 'Register'} width="130px"/>
                     <Button handler={resetHandler} type="reset" color="bg-stone-300" text="Cancel"/>
                 </div>
             </div>

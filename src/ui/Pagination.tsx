@@ -4,7 +4,7 @@ function Pagination({containerLength, page, end, changePage}: {containerLength: 
 
 
     return (
-        <div className="fixed bottom-24 right-10 md:right-4">
+        <div className="my-4">
             {page > 1 && (
                 <Button handler={() => changePage(page - 1)} text="Previous" color="bg-yellow-400"/>
             )}

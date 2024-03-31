@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 import {Moon, Sun} from "@phosphor-icons/react";
 
 function DarkTheme() {
@@ -7,9 +7,11 @@ function DarkTheme() {
         localStorage.getItem('theme') || 'light',
     );
 
-    if (isLightMode === 'dark') {
-        document.documentElement.classList.add('dark');
-    }
+    useEffect(() => {
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark');
+        }
+    }, []);
 
     const themeHandler = () => {
         if (isLightMode === 'light') {
@@ -23,18 +25,12 @@ function DarkTheme() {
         }
     };
     return (
-        <div className="flex items-center mt-2 ml-2 md:mb-0 md:mt-0">
-            {isLightMode === 'light' ? (
-                <Moon size={28} className="mr-2"/>
-            ) : (
-                <Sun size={28} className="mr-2"/>
-            )}
-            <button
-                className="w-1 uppercase tracking-widest"
-                onClick={themeHandler}
-            >
-                {isLightMode === 'light' ? 'Dark' : 'Light'}
-            </button>
+        <div className="flex items-center">
+                {isLightMode === 'light' ? (
+                    <Moon size={30} className="mr-2 cursor-pointer" onClick={themeHandler}/>
+                ) : (
+                    <Sun size={30} className="mr-2 cursor-pointer" onClick={themeHandler}/>
+                )}
         </div>
     );
 }

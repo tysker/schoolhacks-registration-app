@@ -1,12 +1,14 @@
 import axios from 'axios';
 
 const URL = import.meta.env.MODE === 'production' ? 'https://server.schoolhacks.eu/api/v1' : 'http://localhost:3000/api/v1';
-// const URL = 'http://localhost:3000/api/v1';
+
 export const getWorkshops = async () => {
     try {
         const response = await axios.get<AxiosResponseDataWorkShops>(
             `${URL}/workshops`,
         );
+
+        console.log('response.data.workshops', response.data.workshops)
 
         return response.data.workshops;
     } catch (error: any) {

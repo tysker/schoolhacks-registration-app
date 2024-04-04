@@ -4,7 +4,7 @@ import {Moon, Sun} from "@phosphor-icons/react";
 function DarkTheme() {
 
     const [isLightMode, setIsLightMode] = useState(
-        localStorage.getItem('theme') || 'light',
+        localStorage.getItem('theme') || 'light'
     );
 
     useEffect(() => {

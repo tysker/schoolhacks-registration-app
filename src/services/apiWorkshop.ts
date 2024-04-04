@@ -8,8 +8,6 @@ export const getWorkshops = async () => {
             `${URL}/workshops`,
         );
 
-        console.log('response.data.workshops', response.data.workshops)
-
         return response.data.workshops;
     } catch (error: any) {
         throw new Error(error.response.data.message);
